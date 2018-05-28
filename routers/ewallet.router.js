@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getAccountReport} = require('../controllers/ewallet-controller');
+const {getAccountReport} = require('../seed/seed');
 
 router.get('/', getAccountReport);
 
