@@ -1,5 +1,6 @@
 module.exports = {
     User: require('./User'),
-    Account: require('./Account')    
+    Account: require('./Account'),
+    Report: require('./Report')    
   };
   

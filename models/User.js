@@ -2,18 +2,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({ 
-  first_name: {
+  name: {
     type: String,
-    required: true
-  },
-  last_name: {
-    type: String,
-    required: true
-  },
+    required: false
+  },  
   username: {
     type: String,
     required: true,
     unique: true
+  },
+  password: {
+    type: String,
+    required: false
   },
   neteller_email_address: {
     type: String,
@@ -32,7 +32,12 @@ const UserSchema = new Schema({
   created_at: {
     type: Number,
     default: new Date().getTime()
-  }
+  },
+  linked: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
 });
 
 module.exports = mongoose.model('users', UserSchema);
