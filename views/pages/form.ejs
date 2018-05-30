@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Submit New User</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/form-style.css">
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" onsubmit="return submitForm()">
+				<span class="contact100-form-title">
+					Registration Form
+				</span>
+
+				<div class="wrap-input100 validate-input">
+					<label class="label-input100" for="username">Username: </label>
+					<input class="input100" type="text" name="username" id="username" placeholder="Enter your username" onblur="validateName(name)" onfocus="removeChildNode(name)" />
+					<span class="focus-input100"></span>
+				</div>
+
+				
+				<div class="wrap-input100 validate-input">
+					<label class="label-input100" for="email">Email: </label>
+					<input class="input100" type="text" name="email" id="email" placeholder="Enter your email addess" onblur="validateName(name)" onfocus="removeChildNode(name)">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<label class="label-input100" for="account-id">Neteller Account ID: </label>	
+					<input class="input100" type="text" name="account-id" id="account-id" placeholder="Enter your Neteller account ID" onblur="validateName(name)" onfocus="removeChildNode(name)">
+					<span class="focus-input100"></span>
+				</div>				
+				
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>				
+
+						<button class="contact100-form-btn" type="submit" class="btn btn-primary">Submit your details</button>	
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+<script src="./main.js"></script>
+
+
+</body>
+</html>

@@ -1,12 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const {getAccountReport} = require('../controllers/ewallet-controller');
+const reportRouter = require('./report.router');
+const userRouter = require('./user.router');
+const accountRouter = require('./account.router');
 
 router.get('/', (req, res, next) => {
     return res.render('pages/index');
 })
 
-router.get('/fetch-stats', getAccountReport);
+router.use('/accounts', accountRouter);
+
+router.use('/reports', reportRouter);
+
+router.use('/users', userRouter);
 
 module.exports = router;
 
